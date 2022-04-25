@@ -67,18 +67,21 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  * Installation
-  * Use
-  * License
-  * Contributors
-  * Test
-  * Questions
+  * Installation (#installation)
+  * Use (#use)
+  * License (#license)
+  * Contributors (#contributors)
+  * Test (#test)
+  * Questions (#questions)
   
   ## Installation
   The following need to be installed in order to run this application: ${data.installation}
 
   ## Use
   In order to use this application, ${data.use}
+
+  # License 
+  ${renderLicenseSection(license)}
 
   
   # Contributors
