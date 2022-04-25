@@ -2,9 +2,12 @@
 // If there is no license, return an empty string
 //license badge info found at https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 function renderLicenseBadge(license) {
-  if (license === 'None') {
+  if (!license) {
     return ' ';
-  } if (license === 'MIT') {
+  } else {
+    renderLicenseSection(license);
+  }
+   if (license === 'MIT') {
     return `
     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] 
     `;
@@ -47,7 +50,7 @@ function renderLicenseSection(license) {
     return '';
   } return `
   # [License] (#table-of-contents)
-  This project is licensed under the ${renderLicenseLink(license)}
+  This project is licensed under the ${renderLicenseLink(license)} ${renderLicenseBadge(license)}
   `;
     
   
@@ -64,22 +67,20 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  * [Installation] (#installation)
-  * [Use] (#use)
-  * [License] (#license) ${renderLicenseBadge}
-  * [Contributors] (#contributors)
-  * [Test] (#test)
-  * [Questions] (#email)
+  * Installation
+  * Use
+  * License
+  * Contributors
+  * Test
+  * Questions
   
   ## Installation
-  The following need to be installed in order to run this application: $${data.installation}
+  The following need to be installed in order to run this application: ${data.installation}
 
   ## Use
   In order to use this application, ${data.use}
 
-  # License
-  ${renderLicenseSection} ${renderLicenseBadge}
-
+  
   # Contributors
   Contributors to this application: ${data.contributors}
 
