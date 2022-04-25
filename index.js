@@ -18,7 +18,7 @@ const questions = [
         },
         {
             type: 'input',
-            name: 'table of contents',
+            name: 'table-of-contents',
             message: 'Table of Contents:'
         },
         {
@@ -83,7 +83,6 @@ function init() {
     inquirer.prompt(questions)
     .then(function(data) {
         writeToFile('README.md', generateMarkdown(data));
-        console.log(data);
     });
 }
 
