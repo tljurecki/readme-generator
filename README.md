@@ -32,7 +32,7 @@ The following need to be installed to use this application: Node.js, Inquirer, V
 To use this application, intall the required software.  Run node index.js from the command line, answer the prompts and then a professional README.md will be generated
 
 ## Video Tutorial 
-
+Click the link for a video demonstration (https://drive.google.com/file/d/1IRiquYreg-ktSkFtrotLHgfba7GEoTGZ/view)
 
 # Questions
 If you have any questions about this repository, please contact tljurecki@gmail.com
