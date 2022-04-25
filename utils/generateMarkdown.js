@@ -81,7 +81,7 @@ function generateMarkdown(data) {
   In order to use this application, ${data.use}
 
   # License 
-  ${renderLicenseSection(license)}
+  ${renderLicenseSection()}
 
   
   # Contributors
